@@ -8,8 +8,8 @@ def send_email(receiver_email, image_path, body="Hello, this is a test email wit
     """Send an email with an image attachment using SMTP. The sender's email and password are predefined."""
     
     # Predefined sender email and password
-    sender_email = "freedomtech85@gmail.com"
-    sender_password = "drnu evkq zmqw rajv"  # Use an app password if 2FA is enabled
+    sender_email = ""
+    sender_password = ""  # Use an app password if 2FA is enabled
 
     # Create message
     msg = MIMEMultipart()
@@ -40,7 +40,3 @@ def send_email(receiver_email, image_path, body="Hello, this is a test email wit
     finally:
         server.quit()  # Terminate the SMTP session
 
-# Example usage:
-receiver_email = "truckersfan66@gmail.com"
-image_path = "path/to/your/image.jpg"  # Replace with the path to your image
-send_email(receiver_email, image_path)
