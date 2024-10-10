@@ -19,7 +19,7 @@ def send_email(receiver_email, frame):
         # Set up the SMTP server
         server = smtplib.SMTP('smtp.gmail.com', 587)  # Update if using a different service
         server.starttls()  # Enable security
-        server.login('', '')  # Update with your credentials
+        server.login('', '')  # Update with your credentials(sender_mail,password)
 
         # Create the email
         msg = MIMEMultipart()
