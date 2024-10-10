@@ -19,11 +19,11 @@ def send_email(receiver_email, frame):
         # Set up the SMTP server
         server = smtplib.SMTP('smtp.gmail.com', 587)  # Update if using a different service
         server.starttls()  # Enable security
-        server.login('freedomtech85@gmail.com', 'mmgo wvcn eedr nxfn')  # Update with your credentials
+        server.login('', '')  # Update with your credentials
 
         # Create the email
         msg = MIMEMultipart()
-        msg['From'] = 'fredomtech85@gmail.com'  # Update with your email
+        msg['From'] = ''  # Update with your email
         msg['To'] = receiver_email
         msg['Subject'] = 'Suspicious Activity Detected'
 
@@ -123,7 +123,7 @@ def detect_shoplifting(video_path):
                         cvzone.putTextRect(annotated_frame, f"{'Suspicious'}", (int(x1), (int(y1))), 1, 1)
 
                         # Create a thread to send an email with the current frame
-                        receiver_email = "truckersfan66@gmail.com"  # Update with the actual receiver email
+                        receiver_email = ""  # Update with the actual receiver email
                         email_thread = threading.Thread(target=send_email, args=(receiver_email, annotated_frame))
                         email_threads.append(email_thread)  # Track the thread
                         email_thread.start()  # Start the email thread
